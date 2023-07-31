@@ -1,0 +1,114 @@
+:root {
+    --first-green: #ACDA0A;
+    --second-green: #70BC0C;
+    --third-green: #258305;
+    --light-gray: #ddd;
+    --gap: 20px;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light-gray);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 1.5em;
+    background-color: var(--third-green);
+}
+
+.header__title {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.header__subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+}
+
+.grid {
+    border: 1px solid black;
+    padding: var(--gap);
+    display: grid;
+    width: 300px;
+    gap: var(--gap);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-flow: column;
+}
+
+.grid__item {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    height: 125px;
+}
+
+.grid__item:nth-child(1),
+.grid__item:nth-child(4) {
+    background-color: var(--first-green);
+}
+
+
+.grid__item:nth-child(2),
+.grid__item:nth-child(5) {
+    background-color: var(--second-green);
+}
+
+.grid__item:nth-child(3),
+.grid__item:nth-child(6) {
+    background-color: var(--third-green);
+}
+
+.grid__index {
+    padding: 20px;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.footer {
+    background-color: #2C2C2C;
+    padding: 1rem;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.tech-info {
+    background-color: transparent;
+}
+
+.tech-info__title {
+    color: #ddd;
+    font-weight: bold;
+}
+
+.tech-info__list {
+    list-style: none;
+    padding-left: 1em;
+    margin-top: 0.5em;
+    color: #ddd;
+}
+
+.tech-info__tech-name {
+    opacity: 0.75;
+}
